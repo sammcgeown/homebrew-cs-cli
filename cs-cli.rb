@@ -5,28 +5,28 @@
 class CsCli < Formula
   desc ""
   homepage ""
-  version "0.0.15"
+  version "0.1.0"
   license "BSD-2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sammcgeown/cs-cli/releases/download/v0.0.15/cs-cli_0.0.15_Darwin_x86_64.tar.gz"
-    sha256 "4f3e4dd7c91604bdc1f75e06582994d95eaa103c06e2d1ed7a8e201d3a202d46"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "33a1d609fb2cba9882a15636fb889dabd4667ecb1fcda1e50cd58d69249c53a7"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sammcgeown/cs-cli/releases/download/v0.0.15/cs-cli_0.0.15_Darwin_arm64.tar.gz"
-    sha256 "7a65a2cc809f88d458115545e34e3b15c7816715df59cede41357c71df3f09c5"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Darwin_arm64.tar.gz"
+    sha256 "c9681a0e19cb877c4913dd66123daccecbb0b875e376cec7893fbfae6e1a111c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sammcgeown/cs-cli/releases/download/v0.0.15/cs-cli_0.0.15_Linux_x86_64.tar.gz"
-    sha256 "7611ac6e1eb3d11bdc98873aa3e7037bfa173451d3819ef07450464cd18b3c44"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Linux_x86_64.tar.gz"
+    sha256 "689db5f8ca89d323bbd6d3e0bcc6c2ef6b46b48b19c508938647775b4cc75061"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sammcgeown/cs-cli/releases/download/v0.0.15/cs-cli_0.0.15_Linux_arm64.tar.gz"
-    sha256 "ed24fedd3e2d42ebbf74b23acdea501a6a0b5b2310ec9c412cc001590417cdec"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Linux_arm64.tar.gz"
+    sha256 "079710e818f7eea3fbd61f6df5dca1d7c0076a524e4aa2e03b41f4a56f176e2c"
   end
 
   def install
-    bin.install "cs-cli"
+    bin.install "code-stream-cli"
   end
 end
