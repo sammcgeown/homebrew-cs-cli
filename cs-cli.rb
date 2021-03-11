@@ -5,25 +5,25 @@
 class CsCli < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
   license "BSD-2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "33a1d609fb2cba9882a15636fb889dabd4667ecb1fcda1e50cd58d69249c53a7"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Darwin_x86_64.tar.gz"
+    sha256 "5b00fed49452d58d047a682568848788654100544ed52041a0c6421168d6e6de"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Darwin_arm64.tar.gz"
-    sha256 "c9681a0e19cb877c4913dd66123daccecbb0b875e376cec7893fbfae6e1a111c"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Darwin_arm64.tar.gz"
+    sha256 "4c63abe17a2dec9d91e1665587e76376ce091a79f489f060b7d1fa3e2a275eff"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Linux_x86_64.tar.gz"
-    sha256 "689db5f8ca89d323bbd6d3e0bcc6c2ef6b46b48b19c508938647775b4cc75061"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Linux_x86_64.tar.gz"
+    sha256 "19ebf1a831f2e319634cd6fe89a37c275f3071f406d4257644d9c268d1c631f3"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.0/code-stream-cli_0.1.0_Linux_arm64.tar.gz"
-    sha256 "079710e818f7eea3fbd61f6df5dca1d7c0076a524e4aa2e03b41f4a56f176e2c"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Linux_arm64.tar.gz"
+    sha256 "ed7d6ac5aaad59bc45871061add79cd0c7a2f67e738d65399cd62824df0efb11"
   end
 
   def install
