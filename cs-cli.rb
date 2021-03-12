@@ -5,25 +5,25 @@
 class CsCli < Formula
   desc "Code Stream CLI is a command line tool written in Go to interact with the vRealize Automation Code Stream APIs"
   homepage "https://github.com/vmware/code-stream-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "BSD-2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "5b00fed49452d58d047a682568848788654100544ed52041a0c6421168d6e6de"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.2/code-stream-cli_0.1.2_Darwin_x86_64.tar.gz"
+    sha256 "6181130b027b4d039f138587e864e18d23b92a3f7de2b060833fb9688346c0de"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Darwin_arm64.tar.gz"
-    sha256 "4c63abe17a2dec9d91e1665587e76376ce091a79f489f060b7d1fa3e2a275eff"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.2/code-stream-cli_0.1.2_Darwin_arm64.tar.gz"
+    sha256 "9db77556cb7e9e10e1b4d096def66ac1d0ddc527f69b4521e5081f170d032e94"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Linux_x86_64.tar.gz"
-    sha256 "19ebf1a831f2e319634cd6fe89a37c275f3071f406d4257644d9c268d1c631f3"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.2/code-stream-cli_0.1.2_Linux_x86_64.tar.gz"
+    sha256 "11401b132bc165670774e6257ca4f6129df00ea6c8abb6559a1b230786179203"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.1/code-stream-cli_0.1.1_Linux_arm64.tar.gz"
-    sha256 "ed7d6ac5aaad59bc45871061add79cd0c7a2f67e738d65399cd62824df0efb11"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.2/code-stream-cli_0.1.2_Linux_arm64.tar.gz"
+    sha256 "418ded60e2c20820c7c1626904fec1831869630cb2b145192aa4aeb9a2210677"
   end
 
   def install
