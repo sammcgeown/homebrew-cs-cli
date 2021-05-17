@@ -5,25 +5,25 @@
 class CsCli < Formula
   desc "Code Stream CLI is a command line tool written in Go to interact with the vRealize Automation Code Stream APIs"
   homepage "https://github.com/vmware/code-stream-cli"
-  version "0.1.4"
+  version "0.1.5"
   license "BSD-2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.4/code-stream-cli_0.1.4_Darwin_x86_64.tar.gz"
-    sha256 "e86551c9f048c292d8dccd43e298637aefc5d2e384d6eecdbb6e7d250beeabf7"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.5/code-stream-cli_0.1.5_Darwin_x86_64.tar.gz"
+    sha256 "23c07b948932f094e8765c94cb2f780cb99ec8cf66657c7b00dc8765b402c262"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.4/code-stream-cli_0.1.4_Darwin_arm64.tar.gz"
-    sha256 "e6d1fd490b0bc0b31aa1b8eb73172c5de616d07de11daa437babf7cb703fe239"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.5/code-stream-cli_0.1.5_Darwin_arm64.tar.gz"
+    sha256 "419773601f44f835b7ee3d2073178f81e49cabc1b8693154b4d25c4f608c4f0c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.4/code-stream-cli_0.1.4_Linux_x86_64.tar.gz"
-    sha256 "fa7f9b40be4546cb7ae27afae360f2d35d88fccb22c224b0acb3f73509310e22"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.5/code-stream-cli_0.1.5_Linux_x86_64.tar.gz"
+    sha256 "955257ed6c6cc24122c0ab2b9b678485968cb367e814a37a3f78bc89e113d409"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.4/code-stream-cli_0.1.4_Linux_arm64.tar.gz"
-    sha256 "a51dfa3f7f7933a5f87c21d7ce65f4adfdd849bb0747d2780432013072c0b025"
+    url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.5/code-stream-cli_0.1.5_Linux_arm64.tar.gz"
+    sha256 "aac94cdc5796e5214df3e01fb52e5cc5ec4aa2cd7205d5b9acc3d983f1604779"
   end
 
   def install
