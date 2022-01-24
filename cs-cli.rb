@@ -5,33 +5,44 @@
 class CsCli < Formula
   desc "Code Stream CLI is a command line tool written in Go to interact with the vRealize Automation Code Stream APIs"
   homepage "https://github.com/vmware/code-stream-cli"
-  version "0.1.7"
+  version "0.1.10"
   license "BSD-2"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.7/code-stream-cli_0.1.7_Darwin_x86_64.tar.gz"
-      sha256 "43432154aa6e002daa1adf21eda4cb46e79774b2d4428a6d490a3ea94dc4441b"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.7/code-stream-cli_0.1.7_Darwin_arm64.tar.gz"
-      sha256 "10b170ccde8989a848607de121f0effce68d2db0afafe738b214c3d721eb2a7d"
+      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.10/code-stream-cli_0.1.10_Darwin_arm64.tar.gz"
+      sha256 "54306630af47a4794600afc6b2c29e08707dafc048e7e63ca17d91c7cabb6057"
+
+      def install
+        bin.install "cs-cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.10/code-stream-cli_0.1.10_Darwin_x86_64.tar.gz"
+      sha256 "0be1fb1b611ff2b56293cdcae538a99fcacebccca05f4845b685ba84b9d6c420"
+
+      def install
+        bin.install "cs-cli"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.7/code-stream-cli_0.1.7_Linux_x86_64.tar.gz"
-      sha256 "32ea5d9fef2c16afce652ae383a38a67359765b7f03db9968c7a5241a9b2ee9c"
+      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.10/code-stream-cli_0.1.10_Linux_x86_64.tar.gz"
+      sha256 "ef19682fead0d7ca2b4a3d7d703fb063c52677915ed464d82286a2eb8226fb93"
+
+      def install
+        bin.install "cs-cli"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.7/code-stream-cli_0.1.7_Linux_arm64.tar.gz"
-      sha256 "fe9bd21745bd43250fddf1bbd788ecdce3c899d50c8610e9c568612527104861"
-    end
-  end
+      url "https://github.com/vmware/code-stream-cli/releases/download/v0.1.10/code-stream-cli_0.1.10_Linux_arm64.tar.gz"
+      sha256 "de129c837cdaa70c5556a899b37f08d4868fa2bc470c4c7ab1497df4133e493d"
 
-  def install
-    bin.install "cs-cli"
+      def install
+        bin.install "cs-cli"
+      end
+    end
   end
 end
